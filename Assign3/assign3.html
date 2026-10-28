@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="assign3.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.google.com/specimen/Playfair+Display" rel="stylesheet">
+    <link href="https://fonts.google.com/specimen/Montserrat" rel="stylesheet">
+
+    <!-- Google Ions -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <title>Tables, Forms, Tabbed Browsing, and Screen Reading</title>
+</head>
+
+<body>
+    <!-- Header -->
+     <header>
+        <h1><span class="material-symbols-outlined" aria-hidden="true">pets</span>The Cat Companion</h1>
+        <p>Simple advice for happier, healthier cats!</p>
+     </header>
+    
+
+    <!-- Accessible Navigation -->
+     <h2 class="sr-only">Accessible Navigation</h2>
+     <nav class="skip-nav" aria-label="Skip navigation">
+        <h2 class="sr-only">Skip Navigation</h2>
+        <a href="#main">Skip to content</a>
+     </nav>
+
+    <!-- Navigation -->
+    <nav>
+        <h2 class="sr-only">Navigation</h2>
+            <a href="#care">Care</a>
+            <a href="#food">Food and Water</a>
+            <a href="#behavior">Behavior</a>
+            <a href="#play">Play and Enrichment</a>
+            <a href="#stages">Life Stages</a>
+            <a href="#carePlan">Care Planner</a>
+    </nav>
+    
+    <!-- Main Body -->
+     <main id="main">
+
+        <!-- Intro thing-->
+        <section id="introThing">
+            <h2>Love and care will go a long way and give lots of cuddles in return.</h2>
+            <figure>
+                <img src="Images/Lynx-Ragdoll-Female.jpg.webp" alt="A fluffy white and grey cat sitting medium grey couch." height="500">
+                <figcaption>All cats deserve to live in safe and comfortable home where they feel loved!</figcaption>
+            </figure>
+        </section>
+
+        <!-- Information on care -->
+        <section id="care">
+            <!-- Title -->
+            <h2>Everyday Cat Care</h2>
+
+            <!-- Food -->
+           <article id="food">
+            <h3><span class="material-symbols-outlined" aria-hidden="true">restaurant</span>Food and Water</h3> 
+            <p> Provide fresh water and balanced food suited to your cat's age and health. Ask your vet about portion sizes and special dietary needs.</p>
+           </article>
+            
+            <!-- Behavior  -->
+            <article id="behavior">
+                <h3> <span class="material-symbols-outlined" aria-hidden="true">pets</span>Understanding Behavior</h3>
+                <p>A cat's ears, tail, and posture can offer clues about how it feels. Give your cat space to retreat when it seems frightened or uncomfortable.</p>
+            </article>
+
+            <!-- Play and Enrichment-->
+            <article id="play">
+                <h3><span class="material-symbols-outlined" aria-hidden="true">toys</span>Play and Enrichment</h3>
+            <p>Scratching posts, climbing spaces, puzzle feeders, and regular play can help keep cats active and mentally engaged.</p>
+            </article>
+        </section>
+
+
+        <!-- Table for care with at different stages of life -->
+        <section id="stages">
+            <h2 id="stages-title">Cat Care Through the Years</h2>
+
+            <table>
+            <caption>Basic needs at different life stages</caption>
+            <thead>
+            <tr>
+                <th scope="col">Life Stage</th>
+                <th scope="col">Care Focus</th>
+                <th scope="col">Activity Idea</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">Kitten</th>
+                <td>Growth and nutrition</td>
+                <td>Gentle play</td>
+            </tr>
+            <tr>
+                <th scope="row">Adult</th>
+                <td>Healthy routines</td>
+                <td>Interactive toys</td>
+            </tr>
+            <tr>
+                <th scope="row">Senior</th>
+                <td>Comfort and health</td>
+                <td>Gentle activity</td>
+            </tr>
+            </tbody>
+            </table>
+            <p>Every cat is different. A vet can help you choose the right care for your individual cat.</p>
+        </section>
+
+        <!-- Form thing-->
+        <section id="carePlan" aria-labelledby="planner-title">
+            <h2 id="planner-title">Make a Cat Care Plan</h2>
+            <p>Answer these questions to think about your cat's needs.</p>
+
+            <form action="#planner" method="get">
+                <p>
+                <label for="cat-name">What is your cat's name?</label>
+                <input type="text" id="cat-name" name="cat-name">
+                </p>
+
+                <fieldset>
+                <legend>What is your cat's life stage?</legend>
+
+                <label>
+                    <input type="radio" name="age" value="kitten" required>
+                    Kitten
+                </label>
+
+                <label>
+                    <input type="radio" name="age" value="adult">
+                    Adult
+                </label>
+
+                <label>
+                    <input type="radio" name="age" value="senior">
+                    Senior
+                </label>
+                </fieldset>
+
+                <fieldset>
+                <legend>What would you like to focus on?</legend>
+
+                <label>
+                    <input type="checkbox" name="focus" value="food">
+                    Food and nutrition
+                </label>
+
+                <label>
+                    <input type="checkbox" name="focus" value="play">
+                    Play and exercise
+                </label>
+
+                <label>
+                    <input type="checkbox" name="focus" value="behavior">
+                    Behavior
+                </label>
+                </fieldset>
+
+                <p>
+                <label for="notes">Other care goals (optional)</label>
+                <textarea id="notes" name="notes" rows="3"></textarea>
+                </p>
+
+                <button type="submit">Review Answers</button>
+            </form>
+
+            <p><small>This is a class demonstration. Answers are not saved!</small></p>
+        </section>
+
+         <footer>Information from https://www.aspca.org/pet-care/cat-care</footer>
+     </main>
+</body>
+
+</html>
